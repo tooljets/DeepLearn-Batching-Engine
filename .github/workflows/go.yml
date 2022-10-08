@@ -19,4 +19,5 @@ jobs:
         go-version: ^1.13
       id: go
 
-    - name: Check
+    - name: Check out code into the Go module directory
+      us
