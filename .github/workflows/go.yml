@@ -26,4 +26,5 @@ jobs:
       run: |
         go get -v -t -d ./...
         if [ -f Gopkg.toml ]; then
-            curl https://raw.githubuserc
+            curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
+ 
