@@ -277,3 +277,17 @@ func (b *Batching) Run() {
 
 				if length == 0 {
 					// init query from the worker
+					err = b.send(conn)
+				} else {
+					// receive results from workers
+					err = b.receive(conn, length)
+				}
+
+				if err != nil {
+					b.logger.Warn("Socket error", zap.Error(err))
+					break
+				}
+			}
+		}(conn)
+	}
+}
