@@ -175,3 +175,59 @@ func (b *Batching) send(conn net.Conn) error {
 				continue
 			}
 			// append job to the batch
+			b.logger.Info("Job prepared to be sent", zap.String("jobID", job.id))
+			batch[job.id] = job.data
+		case <-time.After(time.Millisecond):
+			// minimal interval: millisecond
+			continue
+		}
+	}
+
+	data, err := msgpack.Marshal(batch)
+	if err != nil {
+		b.logger.Fatal("MessagePack encode error", zap.Error(err))
+	}
+	length := make([]byte, IntByteLength)
+	binary.BigEndian.PutUint32(length, uint32(len(data)))
+	// write length and packed data to the socket
+	_, errLen := conn.Write(length)
+	_, errData := conn.Write(data)
+	if errLen != nil || errData != nil {
+		b.logger.Warn("Socket write error", zap.Error(errLen), zap.Error(errData))
+		return fmt.Errorf("conn error: %v + %v", errLen, errData)
+	}
+	return nil
+}
+
+// receive results from workers
+func (b *Batching) receive(conn net.Conn, length uint32) error {
+	b.logger.Info("Received bytes length", zap.Uint32("length", length))
+	data := make([]byte, length)
+	_, err := conn.Read(data)
+	if err != nil {
+		return err
+	}
+
+	batch := make(String2Bytes)
+	err = msgpack.Unmarshal(data, &batch)
+	if err != nil {
+		b.logger.Fatal("MessagePack decode error", zap.Error(err))
+	}
+	b.logger.Debug("Received data", zap.ByteString("data", data))
+
+	b.jobsLock.Lock()
+	// validation errors
+	errors, ok := batch[ErrorIDsKey]
+	if ok {
+		for i := UUIDLength; i <= len(errors); i += UUIDLength {
+			id := string(errors[i-36 : i])
+			job, exist := b.jobs[id]
+			if exist {
+				job.statusCode = 422
+				b.logger.Info("Validation error for job", zap.Int("statusCode", job.statusCode))
+			}
+		}
+	}
+	// inference result
+	for id, result := range batch {
+		job, ok := b.jobs[id]
