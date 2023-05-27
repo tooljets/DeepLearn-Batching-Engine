@@ -231,3 +231,49 @@ func (b *Batching) receive(conn net.Conn, length uint32) error {
 	// inference result
 	for id, result := range batch {
 		job, ok := b.jobs[id]
+		if ok {
+			b.logger.Info("Job is done", zap.String("jobID", job.id))
+			job.data = result
+			job.done <- true
+			delete(b.jobs, id)
+		}
+		// job may already timeout and return
+	}
+	b.jobsLock.Unlock()
+
+	// next batch
+	return b.send(conn)
+}
+
+// Run the socket communication
+func (b *Batching) Run() {
+	for {
+		// accept socket connection
+		conn, err := b.socket.Accept()
+		if err != nil {
+			if strings.Contains(err.Error(), "use of closed network connection") {
+				break
+			}
+			b.logger.Fatal("Accept error", zap.Error(err))
+		}
+		b.logger.Info("Accept socket connection",
+			zap.String("local", conn.LocalAddr().String()),
+			zap.String("remote", conn.RemoteAddr().String()),
+		)
+
+		go func(conn net.Conn) {
+			lengthByte := make([]byte, IntByteLength)
+			for {
+				if _, err := conn.Read(lengthByte); err != nil {
+					if err == io.EOF {
+						// usually this means the worker is dead
+						b.logger.Warn("EOF")
+						break
+					}
+					b.logger.Warn("Read buffer error", zap.Error(err))
+					continue
+				}
+				length := binary.BigEndian.Uint32(lengthByte)
+
+				if length == 0 {
+					// init query from the worker
