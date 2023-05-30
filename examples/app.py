@@ -13,4 +13,6 @@ class Req(BaseModel):
     text: constr(min_length=2)
 
     class Config:
-        # examples used fo
+        # examples used for health check and warm-up
+        schema_extra = {
+  
