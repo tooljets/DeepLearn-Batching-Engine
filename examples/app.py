@@ -10,4 +10,7 @@ from transformers import DistilBertTokenizer, DistilBertForSequenceClassificatio
 
 class Req(BaseModel):
     # the input sentence should be at least 2 characters
-    text: constr(min_le
+    text: constr(min_length=2)
+
+    class Config:
+        # examples used fo
