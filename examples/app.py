@@ -21,4 +21,8 @@ class Req(BaseModel):
 
 
 class Resp(BaseModel):
-    positive: confloat(ge=0, le=1
+    positive: confloat(ge=0, le=1)
+    negative: confloat(ge=0, le=1)
+
+
+class ModelI
