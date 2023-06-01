@@ -15,4 +15,9 @@ class Req(BaseModel):
     class Config:
         # examples used for health check and warm-up
         schema_extra = {
-            'example': {'text': 'my cat is ver
+            'example': {'text': 'my cat is very cut'},
+            'batch_size': 16,
+        }
+
+
+class
