@@ -20,4 +20,5 @@ class Req(BaseModel):
         }
 
 
-class
+class Resp(BaseModel):
+    positive: confloat(ge=0, le=1
