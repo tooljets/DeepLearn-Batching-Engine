@@ -25,4 +25,6 @@ class Resp(BaseModel):
     negative: confloat(ge=0, le=1)
 
 
-class ModelI
+class ModelInference(Ventu):
+    def __init__(self, *args, **kwargs):
+ 
