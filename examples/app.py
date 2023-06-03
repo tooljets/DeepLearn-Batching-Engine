@@ -30,4 +30,5 @@ class ModelInference(Ventu):
         super().__init__(*args, **kwargs)
         self.tokenizer = DistilBertTokenizer.from_pretrained(
             'distilbert-base-uncased')
-        self.model = DistilBertForSe
+        self.model = DistilBertForSequenceClassification.from_pretrained(
+  
