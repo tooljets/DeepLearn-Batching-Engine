@@ -28,4 +28,5 @@ class Resp(BaseModel):
 class ModelInference(Ventu):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self
+        self.tokenizer = DistilBertTokenizer.from_pretrained(
+            'di
