@@ -31,4 +31,6 @@ class ModelInference(Ventu):
         self.tokenizer = DistilBertTokenizer.from_pretrained(
             'distilbert-base-uncased')
         self.model = DistilBertForSequenceClassification.from_pretrained(
-  
+            'distilbert-base-uncased-finetuned-sst-2-english')
+
+   
