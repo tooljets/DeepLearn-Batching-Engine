@@ -33,4 +33,5 @@ class ModelInference(Ventu):
         self.model = DistilBertForSequenceClassification.from_pretrained(
             'distilbert-base-uncased-finetuned-sst-2-english')
 
-   
+    def preprocess(self, data: Req):
+        token
