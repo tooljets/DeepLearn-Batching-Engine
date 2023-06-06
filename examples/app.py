@@ -34,4 +34,7 @@ class ModelInference(Ventu):
             'distilbert-base-uncased-finetuned-sst-2-english')
 
     def preprocess(self, data: Req):
-        tokens = self.tokenizer.encode(data.text, ad
+        tokens = self.tokenizer.encode(data.text, add_special_tokens=True)
+        return tokens
+
+    def bat
