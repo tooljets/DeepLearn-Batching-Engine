@@ -37,4 +37,5 @@ class ModelInference(Ventu):
         tokens = self.tokenizer.encode(data.text, add_special_tokens=True)
         return tokens
 
-    def bat
+    def batch_inference(self, data):
+        # batch inference is u
