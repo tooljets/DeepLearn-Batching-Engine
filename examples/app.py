@@ -39,4 +39,5 @@ class ModelInference(Ventu):
 
     def batch_inference(self, data):
         # batch inference is used in `socket` mode
-        data = [torch.tensor(token) fo
+        data = [torch.tensor(token) for token in data]
+        with torch.no
