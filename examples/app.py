@@ -41,4 +41,4 @@ class ModelInference(Ventu):
         # batch inference is used in `socket` mode
         data = [torch.tensor(token) for token in data]
         with torch.no_grad():
-            result = self.model(torch.nn.ut
+            result = self.model(torch.nn.utils.rnn.pad_sequence(data, batch_first=True)
