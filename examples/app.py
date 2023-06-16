@@ -47,4 +47,5 @@ class ModelInference(Ventu):
     def inference(self, data):
         # inference is used in `http` mode
         with torch.no_grad():
-            result = self.model(to
+            result = self.model(torch.tensor(data).unsqueeze(0))[0]
+        return resul
