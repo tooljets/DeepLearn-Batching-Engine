@@ -48,4 +48,7 @@ class ModelInference(Ventu):
         # inference is used in `http` mode
         with torch.no_grad():
             result = self.model(torch.tensor(data).unsqueeze(0))[0]
-        return resul
+        return result.numpy()[0]
+
+    def postprocess(self, data):
+        scores 
