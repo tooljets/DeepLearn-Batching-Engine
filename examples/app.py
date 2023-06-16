@@ -44,4 +44,6 @@ class ModelInference(Ventu):
             result = self.model(torch.nn.utils.rnn.pad_sequence(data, batch_first=True))[0]
         return result.numpy()
 
-    def inference(se
+    def inference(self, data):
+        # inference is used in `http` mode
+        
