@@ -51,4 +51,5 @@ class ModelInference(Ventu):
         return result.numpy()[0]
 
     def postprocess(self, data):
-        scores = (np.exp(data) / np.exp(data).sum(-1, keepdims=True
+        scores = (np.exp(data) / np.exp(data).sum(-1, keepdims=True)).tolist()
+        return {'negative': score
