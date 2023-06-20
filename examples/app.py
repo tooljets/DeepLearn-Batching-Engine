@@ -52,4 +52,8 @@ class ModelInference(Ventu):
 
     def postprocess(self, data):
         scores = (np.exp(data) / np.exp(data).sum(-1, keepdims=True)).tolist()
-        return {'negative': score
+        return {'negative': scores[0], 'positive': scores[1]}
+
+
+def create_model():
+   
