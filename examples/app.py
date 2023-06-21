@@ -56,4 +56,5 @@ class ModelInference(Ventu):
 
 
 def create_model():
-   
+    logger = logging.getLogger()
+    formatter = logging.Fo
