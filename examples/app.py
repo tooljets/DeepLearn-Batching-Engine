@@ -58,4 +58,5 @@ class ModelInference(Ventu):
 def create_model():
     logger = logging.getLogger()
     formatter = logging.Formatter(
-        fmt='%(asctime)s - %(levelname
+        fmt='%(asctime)s - %(levelname)s - %(module)s - %(message)s')
+    handler = logging.Stre
