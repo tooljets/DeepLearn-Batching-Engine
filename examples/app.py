@@ -59,4 +59,6 @@ def create_model():
     logger = logging.getLogger()
     formatter = logging.Formatter(
         fmt='%(asctime)s - %(levelname)s - %(module)s - %(message)s')
-    handler = logging.Stre
+    handler = logging.StreamHandler()
+    handler.setFormatter(formatter)
+    log
