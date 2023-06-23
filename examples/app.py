@@ -62,4 +62,6 @@ def create_model():
     handler = logging.StreamHandler()
     handler.setFormatter(formatter)
     logger.setLevel(logging.DEBUG)
-    logger.addHan
+    logger.addHandler(handler)
+
+    model = ModelInference(Req, Resp, use_msgpac
