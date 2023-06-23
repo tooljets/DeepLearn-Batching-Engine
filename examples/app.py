@@ -64,4 +64,9 @@ def create_model():
     logger.setLevel(logging.DEBUG)
     logger.addHandler(handler)
 
-    model = ModelInference(Req, Resp, use_msgpac
+    model = ModelInference(Req, Resp, use_msgpack=True)
+    return model
+
+
+def create_app():
+    """f
