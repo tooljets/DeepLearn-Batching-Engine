@@ -61,4 +61,5 @@ def create_model():
         fmt='%(asctime)s - %(levelname)s - %(module)s - %(message)s')
     handler = logging.StreamHandler()
     handler.setFormatter(formatter)
-    log
+    logger.setLevel(logging.DEBUG)
+    logger.addHan
