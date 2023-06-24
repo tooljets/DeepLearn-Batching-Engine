@@ -69,4 +69,8 @@ def create_model():
 
 
 def create_app():
-    """f
+    """for gunicorn"""
+    return create_model().app
+
+
+if __
