@@ -73,4 +73,5 @@ def create_app():
     return create_model().app
 
 
-if __
+if __name__ == "__main__":
+    parser = argparse.ArgumentPars
