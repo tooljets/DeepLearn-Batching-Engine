@@ -74,4 +74,5 @@ def create_app():
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentPars
+    parser = argparse.ArgumentParser(description='Ventu service')
+    parser.add_argument('--mode
