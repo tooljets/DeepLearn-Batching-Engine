@@ -76,4 +76,5 @@ def create_app():
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Ventu service')
     parser.add_argument('--mode', '-m', default='http', choices=('http', 'unix', 'tcp'))
-    
+    parser.add_argument('--host', default='localhost')
+    p
