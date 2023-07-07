@@ -78,4 +78,5 @@ if __name__ == "__main__":
     parser.add_argument('--mode', '-m', default='http', choices=('http', 'unix', 'tcp'))
     parser.add_argument('--host', default='localhost')
     parser.add_argument('--port', '-p', default=8080, type=int)
-    parser.add_argument('--socket', '-s', def
+    parser.add_argument('--socket', '-s', default='batching.socket')
+    args = parser.parse_arg
