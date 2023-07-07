@@ -79,4 +79,7 @@ if __name__ == "__main__":
     parser.add_argument('--host', default='localhost')
     parser.add_argument('--port', '-p', default=8080, type=int)
     parser.add_argument('--socket', '-s', default='batching.socket')
-    args = parser.parse_arg
+    args = parser.parse_args()
+
+    model = create_model()
+    if args.mode == 'u
