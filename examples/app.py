@@ -82,4 +82,6 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     model = create_model()
-    if args.mode == 'u
+    if args.mode == 'unix':
+        model.run_unix(args.socket)
+    
