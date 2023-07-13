@@ -84,4 +84,5 @@ if __name__ == "__main__":
     model = create_model()
     if args.mode == 'unix':
         model.run_unix(args.socket)
-    
+    elif args.mode == 'tcp':
+        model.run_tcp(ar
