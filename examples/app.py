@@ -85,4 +85,6 @@ if __name__ == "__main__":
     if args.mode == 'unix':
         model.run_unix(args.socket)
     elif args.mode == 'tcp':
-        model.run_tcp(ar
+        model.run_tcp(args.host, args.port)
+    else:
+        model.run_http(args.host, args.por
