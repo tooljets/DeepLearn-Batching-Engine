@@ -87,4 +87,4 @@ if __name__ == "__main__":
     elif args.mode == 'tcp':
         model.run_tcp(args.host, args.port)
     else:
-        model.run_http(args.host, args.por
+        model.run_http(args.host, args.port)
