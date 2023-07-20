@@ -1,2 +1,5 @@
 ignoreGeneratedHeader = false
-sev
+severity = "warning"
+confidence = 0.8
+errorCode = 0
+wa
