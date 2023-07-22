@@ -13,4 +13,7 @@ warningCode = 0
 [rule.error-naming]
 [rule.exported]
 [rule.if-return]
-[rule.increment-decremen
+[rule.increment-decrement]
+[rule.var-naming]
+[rule.var-declaration]
+[rule.package-comm
