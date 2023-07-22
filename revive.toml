@@ -16,4 +16,7 @@ warningCode = 0
 [rule.increment-decrement]
 [rule.var-naming]
 [rule.var-declaration]
-[rule.package-comm
+[rule.package-comments]
+[rule.range]
+[rule.receiver-naming]
+[rule.time
