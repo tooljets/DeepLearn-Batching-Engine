@@ -8,4 +8,7 @@ warningCode = 0
 [rule.context-as-argument]
 [rule.context-keys-type]
 [rule.dot-imports]
-[rule.
+[rule.error-return]
+[rule.error-strings]
+[rule.error-naming]
+[
