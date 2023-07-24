@@ -19,4 +19,7 @@ warningCode = 0
 [rule.package-comments]
 [rule.range]
 [rule.receiver-naming]
-[rule.time
+[rule.time-naming]
+[rule.unexported-return]
+[rule.indent-error-flow]
+[
