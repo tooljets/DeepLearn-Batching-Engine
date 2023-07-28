@@ -12,4 +12,5 @@ import (
 	"time"
 )
 
-f
+func main() {
+	address := flag.String("address", "batch.s
