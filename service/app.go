@@ -14,4 +14,4 @@ import (
 
 func main() {
 	address := flag.String("address", "batch.socket", "socket file or host:port")
-	protocol :
+	protocol := flag.String("protocol", "unix", "unix or tcp")
