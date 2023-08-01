@@ -16,4 +16,5 @@ func main() {
 	address := flag.String("address", "batch.socket", "socket file or host:port")
 	protocol := flag.String("protocol", "unix", "unix or tcp")
 	batchSize := flag.Int("batch", 32, "max batch size")
-	capacity := flag.Int("capacity"
+	capacity := flag.Int("capacity", 1024, "max jobs in the queue")
+	latency := flag.Int("lat
