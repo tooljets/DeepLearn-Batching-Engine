@@ -17,4 +17,5 @@ func main() {
 	protocol := flag.String("protocol", "unix", "unix or tcp")
 	batchSize := flag.Int("batch", 32, "max batch size")
 	capacity := flag.Int("capacity", 1024, "max jobs in the queue")
-	latency := flag.Int("lat
+	latency := flag.Int("latency", 10, "max latency (millisecond)")
+	timeo
