@@ -18,4 +18,5 @@ func main() {
 	batchSize := flag.Int("batch", 32, "max batch size")
 	capacity := flag.Int("capacity", 1024, "max jobs in the queue")
 	latency := flag.Int("latency", 10, "max latency (millisecond)")
-	timeout := flag.Int("timeout", 5000, "timeout for a jo
+	timeout := flag.Int("timeout", 5000, "timeout for a job (millisecond)")
+	host := flag.String("host"
