@@ -20,4 +20,6 @@ func main() {
 	latency := flag.Int("latency", 10, "max latency (millisecond)")
 	timeout := flag.Int("timeout", 5000, "timeout for a job (millisecond)")
 	host := flag.String("host", "0.0.0.0", "host address")
-	port := flag.Int("por
+	port := flag.Int("port", 8080, "service port")
+	flag.Parse()
+	bat
