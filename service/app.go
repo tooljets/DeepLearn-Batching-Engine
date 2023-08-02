@@ -19,4 +19,5 @@ func main() {
 	capacity := flag.Int("capacity", 1024, "max jobs in the queue")
 	latency := flag.Int("latency", 10, "max latency (millisecond)")
 	timeout := flag.Int("timeout", 5000, "timeout for a job (millisecond)")
-	host := flag.String("host"
+	host := flag.String("host", "0.0.0.0", "host address")
+	port := flag.Int("por
