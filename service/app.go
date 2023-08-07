@@ -22,4 +22,7 @@ func main() {
 	host := flag.String("host", "0.0.0.0", "host address")
 	port := flag.Int("port", 8080, "service port")
 	flag.Parse()
-	bat
+	batch := batching.NewBatching(
+		*address,
+		*protocol,
+		*
