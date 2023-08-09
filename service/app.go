@@ -25,4 +25,6 @@ func main() {
 	batch := batching.NewBatching(
 		*address,
 		*protocol,
-		*
+		*batchSize,
+		*capacity,
+		time.Millisecond*time.Dura
