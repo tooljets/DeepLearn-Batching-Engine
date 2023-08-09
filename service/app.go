@@ -27,4 +27,5 @@ func main() {
 		*protocol,
 		*batchSize,
 		*capacity,
-		time.Millisecond*time.Dura
+		time.Millisecond*time.Duration(*latency),
+		time.Millisecond*time.Duration(*timeou
