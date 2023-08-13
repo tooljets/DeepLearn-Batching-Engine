@@ -32,4 +32,5 @@ func main() {
 	)
 
 	s := &fasthttp.Server{
-		Han
+		Handler:     batch.HandleHTTP,
+		ReadTimeout: time.
