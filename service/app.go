@@ -28,4 +28,8 @@ func main() {
 		*batchSize,
 		*capacity,
 		time.Millisecond*time.Duration(*latency),
-		time.Millisecond*time.Duration(*timeou
+		time.Millisecond*time.Duration(*timeout),
+	)
+
+	s := &fasthttp.Server{
+		Han
