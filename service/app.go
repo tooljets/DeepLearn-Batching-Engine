@@ -33,4 +33,7 @@ func main() {
 
 	s := &fasthttp.Server{
 		Handler:     batch.HandleHTTP,
-		ReadTimeout: time.
+		ReadTimeout: time.Millisecond * time.Duration(*timeout),
+	}
+
+	go batch.Ru
