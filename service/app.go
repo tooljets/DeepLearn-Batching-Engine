@@ -39,4 +39,5 @@ func main() {
 	go batch.Run()
 	go func() {
 		if err := s.ListenAndServe(fmt.Sprintf("%s:%d", *host, *port)); err != nil {
-			log
+			log.Fatalf("error in ListenAndServe: %s", err)
+		
