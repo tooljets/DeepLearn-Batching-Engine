@@ -36,4 +36,6 @@ func main() {
 		ReadTimeout: time.Millisecond * time.Duration(*timeout),
 	}
 
-	go batch.Ru
+	go batch.Run()
+	go func() {
+		if err := s.ListenAndSe
