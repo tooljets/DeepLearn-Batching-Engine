@@ -40,4 +40,8 @@ func main() {
 	go func() {
 		if err := s.ListenAndServe(fmt.Sprintf("%s:%d", *host, *port)); err != nil {
 			log.Fatalf("error in ListenAndServe: %s", err)
-		
+		}
+	}()
+
+	// Graceful shutdown
+	quit := make(chan os.Si
