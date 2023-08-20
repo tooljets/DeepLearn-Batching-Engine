@@ -47,4 +47,5 @@ func main() {
 	quit := make(chan os.Signal, 1)
 	signal.Notify(quit, syscall.SIGTERM, syscall.SIGINT)
 	<-quit
-	if err := s.Shutdown(); err !=
+	if err := s.Shutdown(); err != nil {
+		log.Fatalf("error in shutdown: %s", err)
