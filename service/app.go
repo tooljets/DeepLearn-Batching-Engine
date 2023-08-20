@@ -44,4 +44,5 @@ func main() {
 	}()
 
 	// Graceful shutdown
-	quit := make(chan os.Si
+	quit := make(chan os.Signal, 1)
+	signal.Notify(quit, syscall.SIGTERM, syscall.SIGINT
