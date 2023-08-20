@@ -49,3 +49,6 @@ func main() {
 	<-quit
 	if err := s.Shutdown(); err != nil {
 		log.Fatalf("error in shutdown: %s", err)
+	}
+	if err := batch.Stop(); err != nil {
+		log.F
