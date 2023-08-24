@@ -1,3 +1,3 @@
 # DeepLearn Batching Engine
 
-[![Language](https:/
+[![Language](https://img.shields.io/badge/Language-Go-blue.svg)](https
