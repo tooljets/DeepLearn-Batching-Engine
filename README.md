@@ -4,4 +4,4 @@
 [![Go Report Card](https://goreportcard.com/badge/github.com/tooljets/DeepLearn-Batching-Engine)](https://goreportcard.com/report/github.com/tooljets/DeepLearn-Batching-Engine)
 [![GoDoc](https://img.shields.io/badge/Godoc-reference-blue.svg)](https://godoc.org/github.com/tooljets/DeepLearn-Batching-Engine)
 ![GitHub Actions](https://github.com/tooljets/DeepLearn-Batching-Engine/workflows/Go/badge.svg)
-[![LICENSE](https://img.shields.io/github/license/tooljets/DeepLea
+[![LICENSE](https://img.shields.io/github/license/tooljets/DeepLearn-Batching-Engine.svg)](https://github.com/tooljets/DeepLearn-Batchi
