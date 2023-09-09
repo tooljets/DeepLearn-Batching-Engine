@@ -3,4 +3,5 @@
 [![Language](https://img.shields.io/badge/Language-Go-blue.svg)](https://golang.org/)
 [![Go Report Card](https://goreportcard.com/badge/github.com/tooljets/DeepLearn-Batching-Engine)](https://goreportcard.com/report/github.com/tooljets/DeepLearn-Batching-Engine)
 [![GoDoc](https://img.shields.io/badge/Godoc-reference-blue.svg)](https://godoc.org/github.com/tooljets/DeepLearn-Batching-Engine)
-![GitHub Actions](https://github.com/tooljets/DeepLearn-Batching-En
+![GitHub Actions](https://github.com/tooljets/DeepLearn-Batching-Engine/workflows/Go/badge.svg)
+[![LICENSE](https:
