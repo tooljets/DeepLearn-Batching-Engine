@@ -6,4 +6,4 @@
 ![GitHub Actions](https://github.com/tooljets/DeepLearn-Batching-Engine/workflows/Go/badge.svg)
 [![LICENSE](https://img.shields.io/github/license/tooljets/DeepLearn-Batching-Engine.svg)](https://github.com/tooljets/DeepLearn-Batching-Engine/blob/master/LICENSE)
 
-Dynamic Batching Engi
+Dynamic Batching Engine for Deep Learning Serving. A tool that im
