@@ -10,4 +10,4 @@ Dynamic Batching Engine for Deep Learning Serving. A tool that implements dynami
 
 ## Warning
 
-**This tool is currently a proof
+**This tool is currently a proof of concept. Refer to [MOSEC](https://github.com/mo
