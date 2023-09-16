@@ -6,4 +6,8 @@
 ![GitHub Actions](https://github.com/tooljets/DeepLearn-Batching-Engine/workflows/Go/badge.svg)
 [![LICENSE](https://img.shields.io/github/license/tooljets/DeepLearn-Batching-Engine.svg)](https://github.com/tooljets/DeepLearn-Batching-Engine/blob/master/LICENSE)
 
-Dynamic Batching Engine for Deep Learning Serving. A tool that implements dynamic batching with batch size and latency
+Dynamic Batching Engine for Deep Learning Serving. A tool that implements dynamic batching with batch size and latency factors.
+
+## Warning
+
+**This tool is currently a proof
