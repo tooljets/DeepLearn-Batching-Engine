@@ -12,4 +12,6 @@ Dynamic Batching Engine for Deep Learning Serving. A tool that implements dynami
 
 **This tool is currently a proof of concept. Refer to [MOSEC](https://github.com/mosecorg/mosec) for production usage.**
 
-## Main Featu
+## Main Features
+
+* Dynamic batching with control over batch size and la
