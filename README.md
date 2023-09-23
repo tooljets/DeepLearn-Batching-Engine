@@ -15,4 +15,5 @@ Dynamic Batching Engine for Deep Learning Serving. A tool that implements dynami
 ## Main Features
 
 * Dynamic batching with control over batch size and latency
-* Prevents invalid requests from affecting others in
+* Prevents invalid requests from affecting others in the same batch
+* Communicates with workers throu
