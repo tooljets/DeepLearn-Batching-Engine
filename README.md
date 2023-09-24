@@ -19,4 +19,4 @@ Dynamic Batching Engine for Deep Learning Serving. A tool that implements dynami
 * Communicates with workers through Unix domain socket or TCP
 * Supports load balancing
 
-Click [here](https://tooljets.github.io/blogs/
+Click [here](https://tooljets.github.io/blogs/deep-learning-serving/) to read more about th
