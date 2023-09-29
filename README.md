@@ -23,4 +23,10 @@ Click [here](https://tooljets.github.io/blogs/deep-learning-serving/) to read mo
 
 ## Configuration Principles
 
-```shell sc
+```shell script
+go run service/app.go --help
+```
+
+```
+Usage app:
+  -add
