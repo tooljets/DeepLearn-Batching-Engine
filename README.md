@@ -29,4 +29,5 @@ go run service/app.go --help
 
 ```
 Usage app:
-  -add
+  -address string
+        socket file or host:port (default 
