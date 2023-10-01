@@ -32,4 +32,6 @@ Usage app:
   -address string
         socket file or host:port (default "batch.socket")
   -batch int
-        max 
+        max batch size (default 32)
+  -capacity int
+        max job
