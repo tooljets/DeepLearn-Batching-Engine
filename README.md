@@ -30,4 +30,6 @@ go run service/app.go --help
 ```
 Usage app:
   -address string
-        socket file or host:port (default 
+        socket file or host:port (default "batch.socket")
+  -batch int
+        max 
