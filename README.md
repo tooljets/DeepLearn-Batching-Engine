@@ -34,4 +34,6 @@ Usage app:
   -batch int
         max batch size (default 32)
   -capacity int
-        max job
+        max jobs in the queue (default 1024)
+  -host string
+    
