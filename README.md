@@ -36,4 +36,5 @@ Usage app:
   -capacity int
         max jobs in the queue (default 1024)
   -host string
-    
+        host address (default "0.0.0.0")
+  -latency in
