@@ -39,4 +39,6 @@ Usage app:
         host address (default "0.0.0.0")
   -latency int
         max latency (millisecond) (default 10)
-  -port 
+  -port int
+        service port (default 8080)
+  -protocol
