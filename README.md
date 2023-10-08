@@ -43,4 +43,8 @@ Usage app:
         service port (default 8080)
   -protocol string
         unix or tcp (default "unix")
-  -timeo
+  -timeout int
+        timeout for a job (millisecond) (default 5000)
+```
+
+## Demon
