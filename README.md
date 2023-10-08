@@ -41,4 +41,6 @@ Usage app:
         max latency (millisecond) (default 10)
   -port int
         service port (default 8080)
-  -protocol
+  -protocol string
+        unix or tcp (default "unix")
+  -timeo
