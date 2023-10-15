@@ -50,4 +50,7 @@ Usage app:
 ## Demonstration
 
 ```shell script
-go run service/ap
+go run service/app.go
+python examples/app.py
+python examples/client.py
+```
